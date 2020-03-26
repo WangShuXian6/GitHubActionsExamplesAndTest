@@ -31,4 +31,4 @@ jobs:
       uses: contention/rsync-deployments@v1.0.0
       with:
         secrets: ${{ env.MY_V2_SERVER_PRIVATE_KEY }}
-        args: -avzr --delete --exclude examples --exclude /exclude/ ${{ env.MY_V2_USER }}@${{ MY_V2_IP }}:/testActions/
+        args: -avzr --delete --exclude examples --exclude /exclude/ ${{ env.MY_V2_USER }}@${{ env.MY_V2_IP }}:/testActions/
