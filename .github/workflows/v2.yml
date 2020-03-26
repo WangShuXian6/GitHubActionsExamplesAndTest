@@ -32,4 +32,5 @@ jobs:
       env:
         DEPLOY_KEY: ${{ secrets.MY_V2_SERVER_PRIVATE_KEY }}
       with:
-        args: "-avzr --delete ${{ env.MY_V2_USER }}@${{ env.MY_V2_IP }}:/testActions/"
+        #args: "-avzr --delete ${{ env.MY_V2_USER }}@${{ env.MY_V2_IP }}:/testActions/"
+        args: "-avzr --delete --exclude .github --exclude /examples/ --exclude /exclude/ ${{ env.MY_V2_USER }}@${{ env.MY_V2_IP }}:/testActions/"
