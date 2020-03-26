@@ -33,4 +33,4 @@ jobs:
         DEPLOY_KEY: ${{ secrets.MY_V2_SERVER_PRIVATE_KEY }}
       with:
         secrets: ${{ env.MY_V2_SERVER_PRIVATE_KEY }}
-        args: -avzr ${{ env.MY_V2_USER }}@${{ env.MY_V2_IP }}:/testActions/
+        args: "-avzr --delete --exclude examples --exclude /exclude/ ${{ env.MY_V2_USER }}@${{ env.MY_V2_IP }}:/testActions/"
