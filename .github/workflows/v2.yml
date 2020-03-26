@@ -17,9 +17,9 @@ env:
   AZURE_WEBAPP_NAME: your-app-name    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '10.x'                # set this to the node version to use
-  MY_V2_SERVER_PRIVATE_KEY: ${{ MY_V2_SERVER_PRIVATE_KEY }} # 服务器私钥
-  MY_V2_USER: ${{ MY_V2_USER }}
-  MY_V2_IP: ${{ MY_V2_IP }}
+  MY_V2_SERVER_PRIVATE_KEY: ${{ secrets.MY_V2_SERVER_PRIVATE_KEY }} # 服务器私钥
+  MY_V2_USER: ${{ secrets.MY_V2_USER }}
+  MY_V2_IP: ${{ secrets.MY_V2_IP }}
 
 jobs:
   build-and-deploy:
